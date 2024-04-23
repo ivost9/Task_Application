@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="Stylesheet" />
+    <script src="script.js"></script>
+    <title>Day Planner</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="main.html"><img src="images/logo.png"></a>
+        </div>
+        <h1>Планирай деня си</h1>
+        
+    </header>
+
+    <div class="inform" id="empty">
+        <p>Няма неизпълнени задачи!</p>
+    </div>
+    <div class="inform" id="done">
+        <p>Ура! Всички задачи са изпълнени!</p>
+    </div>
+
+    <div class="container">
+        <div id="taskLists">
+            <div id="taskList" class="task-list"></div>
+            <div id="completedList" class="task-list"></div>
+        </div>
+    </div>
+
+    
+
+    <button class="add-button" onclick="openModal()">+</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <input type="text" id="taskInput" placeholder="Задача..." required>
+            <button onclick="closeModal()">Отказ</button>
+            <button onclick="addTask()">Добави</button>
+        </div>
+    </div>
+
+    <select id="taskSelect" onchange="taskSelectChange()">
+        <option value="incompleted">Неизпълнени задачи</option>
+        <option value="completed">Изпълнени задачи</option>
+    </select>
+    
+
+
+</body>
+</html>
